@@ -1,6 +1,5 @@
 import express from 'express';
 import cors from 'cors';
-import { env } from './config/env';
 import { router } from './routes';
 import { errorHandler } from './middlewares/errorHandler';
 
@@ -13,13 +12,12 @@ app.use(express.json());
 // Rotas
 app.use('/api', router);
 
+// Root route for basic health check on Vercel
+app.get('/', (req, res) => {
+    res.send('Notion RAG Assistant Backend is running!');
+});
+
 // Error Handler (Deve ser o último middleware)
 app.use(errorHandler);
 
-// Iniciar Servidor
-const PORT = env.PORT;
-
-app.listen(PORT, () => {
-    console.log(`🚀 Server running on port ${PORT}`);
-    console.log(`👉 http://localhost:${PORT}/api/health`);
-});
+export { app };
