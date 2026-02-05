@@ -59,16 +59,5 @@ O projeto está organizado em workspaces:
    - Frontend: `http://localhost:5173`
    - Backend: `http://localhost:3000`
 
-## ☁️ Deploy na Vercel
-
-O projeto está configurado para deploy fácil na Vercel.
-
-1. Faça o push para o GitHub.
-2. Importe o projeto na Vercel.
-3. Configure as **Environment Variables** nas configurações do projeto na Vercel:
-   - `NOTION_API_KEY`
-   - `GEMINI_API_KEY`
-4. O build e deploy devem ocorrer automaticamente.
-
 ---
 Desenvolvido com ❤️
