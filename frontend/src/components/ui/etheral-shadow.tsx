@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef, useId, useEffect, type CSSProperties } from 'react';
+import { useRef, useId, useEffect, type CSSProperties } from 'react';
 import { animate, useMotionValue, type AnimationPlaybackControls } from 'framer-motion';
 
 // Type definitions
